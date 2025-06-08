@@ -18,7 +18,8 @@ labels = []
 for category in categories:
     folder = os.path.join(base_dir, category)  
     for filename in os.listdir(folder):
-        if filename.endswith(".jpg"):
+            if filename.lower().endswith((".jpg", ".jpeg", ".png")):
+
                 filepath = os.path.join(folder, filename)
     
                 # Ekstraksi fitur
